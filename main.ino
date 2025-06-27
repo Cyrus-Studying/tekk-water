@@ -1,11 +1,15 @@
 int profundidade;
 float ml;
 bool start;
+int todosOsMl;
+int cmParaMl;
 
 void setup(){
   profundidade = 0;
   start = true;
   ml = 0;
+  todosOsMl = 10000;
+  cmParaMl = 
 
   
   Serial.print("Começou com profundidade de: ");
