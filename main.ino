@@ -1,3 +1,9 @@
+// Importações fofinhas UwU
+#include "TM1637Display.h"
+#define CLK 10
+#define DIO 9
+
+
 // Variáveis
 int profundidade;
 float ml;
@@ -13,6 +19,7 @@ void setup(){
   ml = 0;
   todosOsMl = 10000;
   cmParaMl = 400;
+  TM1637Display display(CLK, DIO);
 
 
   // Debug profundidade
@@ -31,12 +38,18 @@ void loop(){
   // função()
   // profundidade = var-resulante
   ml = profundidade * cmParaMl;
-
+  
 
   // Display ml
-  // função(ml);
+  display.setBrightness(0x0f);
+  display.showNumberDec(ml);
 
 
+  // If(ml)
+  if(){
+    
+  }
+  
   // Debug loop
   Serial.println(profundidade);
   Serial.println(ml);
